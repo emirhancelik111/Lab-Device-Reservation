@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KUYAM | Cihaz Randevu ve Kullanım Takip Sistemi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for beautiful icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="glow-bg"></div>
+    <div class="container">
+        <!-- HEADER -->
+        <header>
+            <div class="logo-area">
+                <div class="logo-icon"><i class="fa-solid fa-microscope"></i></div>
+                <div class="logo-text">
+                    <h1>KUYAM</h1>
+                    <p>Cihaz Randevu & Kullanım Takip Sistemi</p>
+                </div>
+            </div>
+            <div class="header-actions">
+                <div class="file-actions">
+                    <label for="json-upload" class="btn btn-secondary">
+                        <i class="fa-solid fa-upload"></i> Veri Yükle (JSON)
+                    </label>
+                    <input type="file" id="json-upload" accept=".json" style="display: none;">
+                    
+                    <button id="btn-export" class="btn btn-secondary">
+                        <i class="fa-solid fa-download"></i> Verileri İndir
+                    </button>
+                </div>
+                <div class="action-buttons">
+                    <button id="btn-open-device-modal" class="btn btn-primary">
+                        <i class="fa-solid fa-plus"></i> Yeni Cihaz Ekle
+                    </button>
+                    <button id="btn-open-booking-modal" class="btn btn-accent">
+                        <i class="fa-solid fa-calendar-plus"></i> Randevu Al
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- DASHBOARD QUICK STATS -->
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon icon-blue"><i class="fa-solid fa-server"></i></div>
+                <div class="stat-info">
+                    <span class="stat-label">Toplam Cihaz</span>
+                    <h3 id="stat-total-devices">0</h3>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon icon-purple"><i class="fa-solid fa-calendar-check"></i></div>
+                <div class="stat-info">
+                    <span class="stat-label">Aktif Rezervasyon</span>
+                    <h3 id="stat-active-reservations">0</h3>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon icon-teal"><i class="fa-solid fa-clock"></i></div>
+                <div class="stat-info">
+                    <span class="stat-label">Bugünkü Kullanım</span>
+                    <h3 id="stat-daily-usage">0s</h3>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon icon-orange"><i class="fa-solid fa-chart-line"></i></div>
+                <div class="stat-info">
+                    <span class="stat-label">Aylık Kullanım</span>
+                    <h3 id="stat-monthly-usage">0s</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAIN LAYOUT -->
+        <main class="dashboard-layout">
+            <!-- LEFT COLUMN: DEVICES -->
+            <section class="panel devices-panel">
+                <div class="panel-header">
+                    <h2><i class="fa-solid fa-cubes"></i> Cihaz Envanteri</h2>
+                    <div class="panel-filters">
+                        <div class="search-box">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" id="device-search" placeholder="Cihaz adı, marka veya model ara...">
+                        </div>
+                        <select id="lab-filter" class="form-select">
+                            <option value="">Tüm Laboratuvarlar</option>
+                            <option value="Kök Hücre">Kök Hücre</option>
+                            <option value="Genel Laboratuvar">Genel Laboratuvar</option>
+                            <option value="Biyokimya">Biyokimya</option>
+                            <option value="Mikrobiyoloji">Mikrobiyoloji</option>
+                            <option value="Bio-İnovatif">Bio-İnovatif</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="devices-grid" id="devices-container">
+                    <!-- Dynamic Device Cards will go here -->
+                    <div class="empty-state" id="devices-empty">
+                        <i class="fa-solid fa-flask-vial"></i>
+                        <p>Henüz cihaz eklenmemiş veya eşleşen cihaz bulunamadı.</p>
+                        <button class="btn btn-primary btn-sm" id="btn-empty-add-device">İlk Cihazı Ekle</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- RIGHT COLUMN: RESERVATIONS -->
+            <section class="panel reservations-panel">
+                <div class="panel-header">
+                    <h2><i class="fa-solid fa-clock-history"></i> Rezervasyon Listesi</h2>
+                    <div class="panel-filters">
+                        <input type="date" id="reservation-date-filter" class="form-select date-filter">
+                        <button id="btn-clear-date" class="btn btn-icon" title="Tarih filtresini temizle">
+                            <i class="fa-solid fa-filter-circle-xmark"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="reservations-list" id="reservations-container">
+                    <!-- Dynamic Reservation Items will go here -->
+                    <div class="empty-state" id="reservations-empty">
+                        <i class="fa-solid fa-calendar-xmark"></i>
+                        <p>Yaklaşan veya seçili tarihe ait rezervasyon bulunmuyor.</p>
+                        <button class="btn btn-accent btn-sm" id="btn-empty-add-booking">Randevu Oluştur</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- MODAL: ADD DEVICE -->
+    <div id="device-modal" class="modal-overlay">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-plus-circle"></i> Yeni Cihaz Kaydı</h3>
+                <button class="close-btn" id="btn-close-device-modal">&times;</button>
+            </div>
+            <form id="device-form">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="device-name">Cihaz Adı *</label>
+                        <input type="text" id="device-name" required placeholder="Örn. Ultramikrotom, PCR Cihazı...">
+                    </div>
+                    <div class="form-group">
+                        <label for="device-brand">Marka *</label>
+                        <input type="text" id="device-brand" required placeholder="Örn. Leica, Thermo Fisher...">
+                    </div>
+                    <div class="form-group">
+                        <label for="device-model">Model *</label>
+                        <input type="text" id="device-model" required placeholder="Örn. EM UC7, QuantStudio 5...">
+                    </div>
+                    <div class="form-group">
+                        <label for="device-lab">Bulunduğu Laboratuvar *</label>
+                        <select id="device-lab" required class="form-select">
+                            <option value="" disabled selected>Laboratuvar Seçiniz</option>
+                            <option value="Kök Hücre">Kök Hücre</option>
+                            <option value="Genel Laboratuvar">Genel Laboratuvar</option>
+                            <option value="Biyokimya">Biyokimya</option>
+                            <option value="Mikrobiyoloji">Mikrobiyoloji</option>
+                            <option value="Bio-İnovatif">Bio-İnovatif</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="btn-cancel-device-modal">İptal</button>
+                    <button type="submit" class="btn btn-primary">Cihazı Kaydet</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL: ADD RESERVATION -->
+    <div id="booking-modal" class="modal-overlay">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-calendar-plus"></i> Cihaz Randevu Oluştur</h3>
+                <button class="close-btn" id="btn-close-booking-modal">&times;</button>
+            </div>
+            <form id="booking-form">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="booking-device">Cihaz Seçimi *</label>
+                        <select id="booking-device" required class="form-select">
+                            <!-- Dynamic dropdown from registered devices -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="booking-user">Rezervasyon Yapan Adı Soyadı *</label>
+                        <input type="text" id="booking-user" required placeholder="Örn. Dr. Ahmet Yılmaz">
+                    </div>
+                    <div class="form-group">
+                        <label for="booking-date">Randevu Tarihi *</label>
+                        <input type="date" id="booking-date" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="booking-start">Başlangıç Saati *</label>
+                            <input type="time" id="booking-start" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="booking-end">Bitiş Saati *</label>
+                            <input type="time" id="booking-end" required>
+                        </div>
+                    </div>
+                    <!-- Overlap validation warning banner -->
+                    <div id="booking-error" class="error-banner" style="display: none;">
+                        <i class="fa-solid fa-triangle-exclamation"></i> <span id="error-message"></span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="btn-cancel-booking-modal">İptal</button>
+                    <button type="submit" class="btn btn-accent">Randevuyu Tamamla</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

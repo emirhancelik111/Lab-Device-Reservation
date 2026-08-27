@@ -1,0 +1,252 @@
+{
+  "devices": [
+    {
+      "id": "dev-1786612010993",
+      "name": "ULTRASONİK BANYO",
+      "brand": "DAIHAN",
+      "model": "WUC-D10H",
+      "lab": "Genel Laboratuvar"
+    },
+    {
+      "id": "dev-1786612055632",
+      "name": "ÇALKALAMALI SU BANYOSU",
+      "brand": "DAIHAN",
+      "model": "MAXTURDY-18",
+      "lab": "Kök Hücre"
+    },
+    {
+      "id": "dev-1786612095696",
+      "name": "ÇALKALAMALI SU BANYOSU",
+      "brand": "İLDAM",
+      "model": "1",
+      "lab": "Mikrobiyoloji"
+    },
+    {
+      "id": "dev-1786612142401",
+      "name": "BAKTERİYOLOJİK ETÜV",
+      "brand": "ELEKTROMAG",
+      "model": "420 BP 48LT",
+      "lab": "Genel Laboratuvar"
+    },
+    {
+      "id": "dev-1786612166601",
+      "name": "KURU HAVA STERİLİZATÖRÜ",
+      "brand": "FROİLABO",
+      "model": "AİR PERFORMANCE",
+      "lab": "Mikrobiyoloji"
+    },
+    {
+      "id": "dev-1786612213241",
+      "name": "KARBONDİOKSİTLİ İNKÜBATÖR",
+      "brand": "MEMMERT",
+      "model": "ICO 150",
+      "lab": "Kök Hücre"
+    },
+    {
+      "id": "dev-1786612310081",
+      "name": "ÇALKALAMALI SOĞUTMALI İNKÜBATÖR",
+      "brand": "MİKROTEST",
+      "model": "MSC-250",
+      "lab": "Mikrobiyoloji"
+    },
+    {
+      "id": "dev-1786612351017",
+      "name": "KARBONDİOKSİTLİ İNKÜBATÖR",
+      "brand": "RWDLİFE",
+      "model": "D180",
+      "lab": "Kök Hücre"
+    },
+    {
+      "id": "dev-1786612400472",
+      "name": "CONSTANT TEMPERATURE SHAKING INCUBATOR",
+      "brand": "FAITHFUL",
+      "model": "FS-70B",
+      "lab": "Mikrobiyoloji"
+    },
+    {
+      "id": "dev-1786612433361",
+      "name": "ELEKTROTERMAL İNKÜBATÖR",
+      "brand": "LABART",
+      "model": "Lİ-124D",
+      "lab": "Mikrobiyoloji"
+    },
+    {
+      "id": "dev-1786612468792",
+      "name": "ORBİTAL ÇALKALAYICI",
+      "brand": "OHAUS",
+      "model": "ENDEAVOR 5000",
+      "lab": "Biyokimya"
+    },
+    {
+      "id": "dev-1786612538160",
+      "name": "EKSTRAKSİYON CİHAZI",
+      "brand": "BIOTAGE",
+      "model": "PRESSURE+ 48 MANIFOLD",
+      "lab": "Genel Laboratuvar"
+    },
+    {
+      "id": "dev-1786612611744",
+      "name": "ELEKTROFOREZ",
+      "brand": "BIORAD",
+      "model": "MINI PROTEAN SYSTEM",
+      "lab": "Genel Laboratuvar"
+    },
+    {
+      "id": "dev-1786612635798",
+      "name": "ELEKTROFOREZ",
+      "brand": "HOEFER",
+      "model": "HE-PLUS",
+      "lab": "Genel Laboratuvar"
+    },
+    {
+      "id": "dev-1786612672070",
+      "name": "OTOKLAV",
+      "brand": "ALP",
+      "model": "CL-32L",
+      "lab": "Genel Laboratuvar"
+    },
+    {
+      "id": "dev-1786612727312",
+      "name": "SOĞUTMALI SANTRİFÜJ",
+      "brand": "HERMLE",
+      "model": "Z-326K",
+      "lab": "Genel Laboratuvar"
+    },
+    {
+      "id": "dev-1786612769758",
+      "name": "SOĞUTMALI MİKRO SANTRİFÜJ",
+      "brand": "SIGMA",
+      "model": "1-14K",
+      "lab": "Biyokimya"
+    },
+    {
+      "id": "dev-1786612815742",
+      "name": "AYARLANABİLİR MİKRO SANTRİFÜJ",
+      "brand": "WEIGHT LAB INSTRUMENT",
+      "model": "WN-CMV6000",
+      "lab": "Genel Laboratuvar"
+    },
+    {
+      "id": "dev-1786612881087",
+      "name": "MASAÜSTÜ SANTRİFÜJ",
+      "brand": "BECKMAN COULTER",
+      "model": "ALLEGRA X-30R",
+      "lab": "Genel Laboratuvar"
+    },
+    {
+      "id": "dev-1786612933631",
+      "name": "YER TİPİ SOĞUTMALI SANTRİFÜJ",
+      "brand": "BECKMAN COULTER",
+      "model": "OPTIMA XPN-100",
+      "lab": "Genel Laboratuvar"
+    },
+    {
+      "id": "dev-1786612971237",
+      "name": "MASAÜSTÜ SANTRİFÜJ",
+      "brand": "BECKMAN COULTER",
+      "model": "MICROFUGE 20R",
+      "lab": "Kök Hücre"
+    },
+    {
+      "id": "dev-1786613035006",
+      "name": "WESTERN BLOT KONFİRMASYON SİSTEMİ",
+      "brand": "BIORAD",
+      "model": "TRANS-BLOT TURBO TRANSFER SYSTEM",
+      "lab": "Genel Laboratuvar"
+    },
+    {
+      "id": "dev-1786613063140",
+      "name": "FLUOROMETRE",
+      "brand": "INVITROJEN",
+      "model": "QUBİT4",
+      "lab": "Genel Laboratuvar"
+    },
+    {
+      "id": "dev-1786613247716",
+      "name": "ARAŞTIRMA MİKROSKOBU",
+      "brand": "ZEISS",
+      "model": "STEMI 508",
+      "lab": "Mikrobiyoloji"
+    },
+    {
+      "id": "dev-1786613302644",
+      "name": "STEREO KAMERA MİKROSKOP",
+      "brand": "ZEISS",
+      "model": "STEMİ 508",
+      "lab": "Mikrobiyoloji"
+    },
+    {
+      "id": "dev-1786613368604",
+      "name": "TRİNOKÜLER ARAŞTIRMA MİKROSKOPU",
+      "brand": "NİKON",
+      "model": "ECLİPS 80 İ",
+      "lab": "Genel Laboratuvar"
+    },
+    {
+      "id": "dev-1786613420203",
+      "name": "İLERİ DÜZEY FLORESAN MİKROSKOP GÖRÜNTÜLEME",
+      "brand": "ZEISS",
+      "model": "AXIO OBSERVER 7",
+      "lab": "Kök Hücre"
+    },
+    {
+      "id": "dev-1786613464261",
+      "name": "3D YAZICI",
+      "brand": "ULTİMAKER 2-GO EXTEND",
+      "model": "1",
+      "lab": "Bio-İnovatif"
+    },
+    {
+      "id": "dev-1786613493125",
+      "name": "BİYO BASIM CİHAZI",
+      "brand": "AXOLOTL BIO SYSTEMS",
+      "model": "AXO C3",
+      "lab": "Bio-İnovatif"
+    },
+    {
+      "id": "dev-1786613539076",
+      "name": "WESTERN BLOT SİSTEMİ GÜÇ KAYNAĞI ÇALIŞMA İST",
+      "brand": "BIORAD",
+      "model": "GNRS-1645050",
+      "lab": "Genel Laboratuvar"
+    },
+    {
+      "id": "dev-1786613573490",
+      "name": "DONDURUCU",
+      "brand": "UĞUR DERİN DONDURUCU",
+      "model": "UED 55169 DTK R65",
+      "lab": "Biyokimya"
+    },
+    {
+      "id": "dev-1786613607819",
+      "name": "AŞI SAKLAMA DOLABI",
+      "brand": "COOLERMED",
+      "model": "ECO375ASI",
+      "lab": "Genel Laboratuvar"
+    },
+    {
+      "id": "dev-1786613637724",
+      "name": "AŞI SAKLAMA DOLABI",
+      "brand": "COOLERMED",
+      "model": "ECO375ASI",
+      "lab": "Biyokimya"
+    },
+    {
+      "id": "dev-1786613657020",
+      "name": "AŞI SAKLAMA DOLABI",
+      "brand": "COOLERMED",
+      "model": "ECO375ASI",
+      "lab": "Mikrobiyoloji"
+    }
+  ],
+  "reservations": [
+    {
+      "id": "res-1786613716322",
+      "deviceId": "dev-1786612010993",
+      "user": "STAJYER DENEME",
+      "date": "2026-08-13",
+      "start": "12:35",
+      "end": "13:35"
+    }
+  ]
+}
